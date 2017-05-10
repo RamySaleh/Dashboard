@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard", "Dashboard\Dash
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.Tests", "Dashboard.Tests\Dashboard.Tests.csproj", "{940812B7-A8C9-451E-A245-DCC0F7A983C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dashboard.UpdateVehicleStatusWebJob", "Dashboard.UpdateVehicleStatusWebJob\Dashboard.UpdateVehicleStatusWebJob.csproj", "{AA85E663-CA58-436B-BD7E-173B98318DEA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{940812B7-A8C9-451E-A245-DCC0F7A983C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{940812B7-A8C9-451E-A245-DCC0F7A983C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{940812B7-A8C9-451E-A245-DCC0F7A983C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA85E663-CA58-436B-BD7E-173B98318DEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA85E663-CA58-436B-BD7E-173B98318DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA85E663-CA58-436B-BD7E-173B98318DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA85E663-CA58-436B-BD7E-173B98318DEA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

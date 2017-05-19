@@ -16,7 +16,11 @@ namespace Dashboard.UpdateVehicleStatusWebJob
         {
             var host = new JobHost();
             // The following code ensures that the WebJob will be running continuously
+            Console.WriteLine("Web job reached - before!");
+
             host.RunAndBlock();
+
+            Console.WriteLine("Web job reached!");
         }
     }
 }

@@ -1,0 +1,9 @@
+﻿{
+  "$schema": "http://schemastore.org/schemas/json/webjob-publish-settings.json",
+  "webJobName": "UpdateVehicleStatusWebJob",
+  "startTime": "2017-05-10T00:00:00+02:00",
+  "endTime": null,
+  "jobRecurrenceFrequency": "Minute",
+  "interval": 2,
+  "runMode": "Scheduled"
+}

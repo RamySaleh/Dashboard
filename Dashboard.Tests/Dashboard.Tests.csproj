@@ -92,9 +92,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dashboard\Dashboard.csproj">
+    <ProjectReference Include="..\Dashboard\Dashboard.MVC.csproj">
       <Project>{BA69843C-9728-4C05-A76A-2FD56F300F5B}</Project>
-      <Name>Dashboard</Name>
+      <Name>Dashboard.MVC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

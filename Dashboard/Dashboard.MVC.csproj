@@ -250,6 +250,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dashboard.Models\Dashboard.Models.csproj">
+      <Project>{8c9fb7b9-5727-4a6e-9073-351afee0f97e}</Project>
+      <Name>Dashboard.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashboard.Repositories\Dashboard.Repositories.csproj">
+      <Project>{2d46c9f5-655f-46b4-b564-7071ecfe724f}</Project>
+      <Name>Dashboard.Repositories</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

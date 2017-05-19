@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dashboard.Repositories.CustomerRepository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,8 @@ namespace Dashboard.Controllers
         // GET: Dashboard
         public ActionResult Index()
         {
-
-            return View();
+            var customers = new CustomerRepository().GetAll().ToList();
+            return View(customers);
         }
     }
 }

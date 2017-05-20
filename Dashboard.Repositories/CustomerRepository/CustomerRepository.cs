@@ -25,5 +25,21 @@ namespace Dashboard.Repositories.CustomerRepository
             var customers = _dbClient.CreateDocumentQuery<Customer>(_customersLink).OrderBy(c => c.Name);
             return customers;
         }
+
+        public IQueryable<Customer> FilterCustomers(string customerName, bool? vehicleStatus)
+        {
+            var customers = _dbClient.CreateDocumentQuery<Customer>(_customersLink).Where(c => c.Name.StartsWith(customerName));
+
+            if (vehicleStatus.HasValue)
+            {
+                customers = customers.ToList().Where(c => c.OwnedVehicles.Any(v => v.Status == vehicleStatus.Value)).AsQueryable();
+                foreach (var customer in customers)
+                {
+                    customer.OwnedVehicles = customer.OwnedVehicles.Where(v => v.Status = vehicleStatus.Value).ToList();
+                }
+            }
+                
+            return customers.OrderBy(c => c.Name).AsQueryable();
+        }
     }
 }

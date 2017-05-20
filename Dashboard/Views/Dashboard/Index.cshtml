@@ -1,8 +1,54 @@
-﻿
+﻿@model List<Dashboard.Models.Customer>
 @{
     ViewBag.Title = "Dashboard";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="panel panel-default" style="height:50px">
+        <div style="margin-top:10px">
+            <b style="margin-left:30px;margin-right:10px">Name : </b><input type="text" name="CustomerNameFilter" />
+            <b style="margin-left:80px;margin-right:10px">Status : </b> <select name="VehicleStatusFilter">
+                <option value="">All</option>
+                <option value="true">Connected</option>
+                <option value="false">Disconnected</option>
+            </select>
+            <input type="submit" value="Filter" />
+        </div>
+    </div>
+}
+
+<div style="margin-top:20px">
+    @{
+        foreach (var customer in Model)
+        {
+            <div>
+                <b>Name:</b>  @customer.Name
+                <b style="margin-left:50px">Address</b> @customer.Address
+
+                @foreach (var vehicle in customer.OwnedVehicles)
+                { 
+                  <div style="margin-left:20px;margin-top:10px">
+                    <b>Vehicle Id:</b> @vehicle.id
+                      <br/>
+                    <b>Registeration Number:</b> @vehicle.RegisterationNumber
+                    <b>Status:</b> 
+                      @if (vehicle.Status)
+                      {
+                        <div class="glyphicon glyphicon-ok-circle"></div>
+                      }
+                      else
+                      {
+                        <div class="glyphicon glyphicon-remove-circle"></div>
+                      }
+                  </div>
+                }
+            </div>
+            <div style="margin-top:20px"></div>
+        }
+    }
+</div>
 

@@ -36,14 +36,7 @@
                       <br/>
                     <b>Registeration Number:</b> @vehicle.RegisterationNumber
                     <b>Status:</b> 
-                      @if (vehicle.Status)
-                      {
-                        <div class="glyphicon glyphicon-ok-circle"></div>
-                      }
-                      else
-                      {
-                        <div class="glyphicon glyphicon-remove-circle"></div>
-                      }
+                    <div class="@(vehicle.Status ? "glyphicon glyphicon-ok-circle":"glyphicon glyphicon-remove-circle")"></div>
                   </div>
                 }
             </div>

@@ -30,7 +30,7 @@ namespace Dashboard.Controllers
                     }
                 }
 
-                customers = new CustomerRepository().FilterCustomers(customerNameFilter, vehicleStatus).ToList();
+                customers = new CustomerRepository().FilterCustomers(customerNameFilter, vehicleStatus).ToList();                
             }           
             
             return View(customers);

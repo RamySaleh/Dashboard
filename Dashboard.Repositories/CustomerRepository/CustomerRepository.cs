@@ -41,5 +41,14 @@ namespace Dashboard.Repositories.CustomerRepository
                 
             return customers.OrderBy(c => c.Name).AsQueryable();
         }
+
+        public string Update(Customer updatedEntity)
+        {
+            var documentUri = UriFactory.CreateDocumentUri("DashboardDB", "Customers", updatedEntity.id);
+
+            var updated = _dbClient.ReplaceDocumentAsync(documentUri, updatedEntity).Result;
+
+            return updated.Resource.Id;
+        }
     }
 }

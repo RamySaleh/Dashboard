@@ -9,5 +9,7 @@ namespace Dashboard.Repositories
     public interface IRepository<T>
     {
         IQueryable<T> GetAll();
+
+        string Update(T updatedEntity);
     }
 }

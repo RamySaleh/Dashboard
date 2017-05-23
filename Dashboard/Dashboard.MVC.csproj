@@ -239,6 +239,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
     <Content Include="Views\Dashboard\Edit.cshtml" />
+    <Content Include="Views\Dashboard\CustomerView.cshtml" />
+    <Content Include="Views\Dashboard\VehicleView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

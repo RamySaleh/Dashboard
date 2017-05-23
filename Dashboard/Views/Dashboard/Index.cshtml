@@ -25,23 +25,7 @@
     @{
         foreach (var customer in Model)
         {
-            <div>
-                <b>Name:</b>  @customer.Name
-                <b style="margin-left:50px">Address</b> @customer.Address
-
-                @foreach (var vehicle in customer.OwnedVehicles)
-                { 
-                  <div style="margin-left:20px;margin-top:10px">
-                    <b>Vehicle Id:</b> @vehicle.id
-                      <br/>
-                    <b>Registeration Number:</b> @vehicle.RegisterationNumber
-                    <b>Status:</b> 
-                    <div class="@(vehicle.Status ? "glyphicon glyphicon-ok-circle":"glyphicon glyphicon-remove-circle")"></div>
-                  </div>
-                }
-            </div>
-            @Html.ActionLink("Edit", "Edit", new { id = @customer.id });
-            <div style="margin-top:20px"></div>
+            @Html.Partial("CustomerView", customer);
         }
     }
 </div>

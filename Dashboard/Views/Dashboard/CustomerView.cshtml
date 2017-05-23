@@ -1,0 +1,13 @@
+﻿@model Dashboard.Models.Customer
+
+<div>
+    <b>Name:</b>  @Model.Name
+    <b style="margin-left:50px">Address</b> @Model.Address
+
+    @foreach (var vehicle in Model.OwnedVehicles)
+    {
+        @Html.Partial("VehicleView", vehicle)
+    }
+</div>
+@Html.ActionLink("Edit", "Edit", new { id = @Model.id })
+<div style="margin-top:20px"></div>

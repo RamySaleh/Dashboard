@@ -1,0 +1,9 @@
+﻿@model Dashboard.Models.Vehicle
+
+<div style="margin-left:20px;margin-top:10px">
+    <b>Vehicle Id:</b> @Model.id
+    <br />
+    <b>Registeration Number:</b> @Model.RegisterationNumber
+    <b>Status:</b>
+    <div class="@(Model.Status ? "glyphicon glyphicon-ok-circle":"glyphicon glyphicon-remove-circle")"></div>
+</div>

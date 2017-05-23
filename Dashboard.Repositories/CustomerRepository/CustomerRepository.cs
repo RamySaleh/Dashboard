@@ -50,5 +50,11 @@ namespace Dashboard.Repositories.CustomerRepository
 
             return updated.Resource.Id;
         }
+
+        public Customer GetById(string id)
+        {
+            var customer = _dbClient.CreateDocumentQuery<Customer>(_customersLink).Where(c => c.id == id).ToList().FirstOrDefault();
+            return customer;
+        }
     }
 }

@@ -35,5 +35,24 @@ namespace Dashboard.Controllers
             
             return View(customers);
         }
+
+        public ActionResult Edit(string id)
+        {
+            var customer = new CustomerRepository().GetById(id);
+            return View(customer);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(string id,FormCollection collection)
+        {
+            var customerRepository = new CustomerRepository();
+            var customer = customerRepository.GetById(id);
+            if (TryUpdateModel(customer))
+            {
+                customerRepository.Update(customer);
+                return RedirectToAction("Index");
+            }
+            return View(customer);
+        }
     }
 }

@@ -10,6 +10,8 @@ namespace Dashboard.Repositories
     {
         IQueryable<T> GetAll();
 
-        string Update(T updatedEntity);
+        T GetById(string id);
+
+        string Update(T updatedEntity);        
     }
 }
